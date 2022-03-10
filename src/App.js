@@ -7,7 +7,6 @@ import Collected from './home_router/Collected';
 import MintPage from './MintPage';
 import {useState} from 'react';
 
-
 function App() {
   const [wallet, setWallet] = useState(0);
 

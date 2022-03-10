@@ -72,3 +72,14 @@
   border-radius: 5px;
   text-decoration: none;
 }
+
+.mintPage select, .mintPage label {
+  display:block;
+  margin: 10px;
+  justify-content: center;
+}
+
+.mintPage button{
+  position: relative;
+  justify-content: center;
+}
