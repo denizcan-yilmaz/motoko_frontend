@@ -83,3 +83,21 @@
   position: relative;
   justify-content: center;
 }
+
+
+.mintPage{
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+.mintForm {
+  margin-left: 100px;
+}
+.image-overlay img{
+  position: absolute;
+  left:15%;
+  top:35%;
+  height:300px;
+  width:300px;
+}
