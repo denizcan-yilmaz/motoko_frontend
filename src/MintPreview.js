@@ -1,16 +1,18 @@
 const MintPreview = (props) => {
     return (
         <div className="image-overlay">
-            <img src={require(`./images/BackGround/${props.bg}.png`)} className="bg"/>
-            <img src={require(`./images/Hand/${props.hand}.png`)} className="hand"/>
-            <img src={require(`./images/HeadAccessory/${props.accessory}.png`)} className="hand"/>
-            <img src={require(`./images/OnTable/${props.onTable}.png`)} className="ontable"/>
-            <img src={require(`./images/OnWall/${props.onWall}.png`)} className="onwall"/>
-            <img src={require(`./images/Table_Chair/${props.tableChair}.png`)} className="tableChair"/>
-            <img src={require(`./images/TorsoDress/${props.torsoDress}.png`)} className="torsoDress"/>
-            <img src={require(`./images/Head/9.png`)} className="headBase"/>
-            <img src={require(`./images/Head/${props.head}.png`)} className="head"/>
-
+            <img src={require(`./images/BackGround/${props.bg}.png`)} className="bg"alt="artwork_piece"/>
+            <img src={require(`./images/TorsoDress/${props.torsoDress}.png`)} className="torsoDress"alt="artwork_piece"/>
+            <img src={require(`./images/Hand/${props.hand}.png`)} className="hand"alt="artwork_piece"/>
+            <img src={require(`./images/Head/HeadBase.png`)} className="headBase"alt="artwork_piece"/>
+            <img src={require(`./images/Head/Nose.png`)} className="nose"alt="artwork_piece"/>
+            <img src={require(`./images/Head/Mouth/${props.moustache}.png`)} className="moustache"alt="artwork_piece"/>
+            <img src={require(`./images/Head/Eye/${props.eye}.png`)} className="eye"alt="artwork_piece"/>
+            <img src={require(`./images/Head/Hair/${props.hair}.png`)} className="hair"alt="artwork_piece"/>
+            <img src={require(`./images/HeadAccessory/${props.accessory}.png`)} className="accessory"alt="artwork_piece"/>
+            <img src={require(`./images/OnTable/${props.onTable}.png`)} className="ontable"alt="artwork_piece"/>
+            <img src={require(`./images/OnWall/${props.onWall}.png`)} className="onwall"alt="artwork_piece"/>
+            <img src={require(`./images/Table_Chair/0.png`)} className="tableChair"alt="artwork_piece"/>
 
         </div>
     );

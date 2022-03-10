@@ -4,7 +4,7 @@ import MintPreview from "./MintPreview";
 const MintPage = () => {
 
     const dnaGenerator = () => {
-        return( bg + hand + head + accessory + onTable + onWall + tableChair + torsoDress );
+        return( bg + hand + eye + moustache + hair + accessory + onTable + onWall  + torsoDress );
     }
 
     const handleSubmit = () => {
@@ -13,11 +13,12 @@ const MintPage = () => {
 
     const [bg, setBg] = useState("0");
     const [hand, setHand] = useState("0");
-    const [head, setHead] = useState("0");
+    const [eye, setEye] = useState("0");
+    const [moustache, setMoustache] = useState("0");
+    const [hair, setHair] = useState("0");
     const [accessory, setAccessory] = useState("0");
     const [onTable, setOnTable] = useState("0");
     const [onWall, setOnWall] = useState("0");
-    const [tableChair, setTableChair] = useState("0");
     const [torsoDress, setTorsoDress] = useState("0");
 
     return (
@@ -41,19 +42,33 @@ const MintPage = () => {
                         <option value="1">HandStraight</option>
                     </select>
 
-                    <label>Choose a Head</label>
-                    <select name="head" id="head" required value={head} onChange={(e)=>setHead(e.target.value)}>
-                        <option value="0">AngryMouth</option>
-                        <option value="1">BigMustash</option>
-                        <option value="2">ButterflyMustash</option>
+
+                    <label>Choose a Mouth Type</label>
+                    <select name="moustache" id="moustache" required value={moustache} onChange={(e)=>setMoustache(e.target.value)}>
+                        <option value="0">Angry</option>
+                        <option value="1">BigMoustache</option>
+                        <option value="2">ButterflyMoustache</option>
                         <option value="3">ChillMouth</option>
-                        <option value="4">EyeClose</option>
-                        <option value="5">EyeNormal</option>
-                        <option value="6">FullBeard</option>
-                        <option value="7">HairNormal</option>
-                        <option value="8">HairPink</option>
-                        <option value="9">HeadBase</option>
+                        <option value="4">FullBeard</option>
+                        <option value="5">SadMouth</option>
+                        <option value="6">Smile</option>
+
                     </select>
+
+                    <label>Choose an Eye Type</label>
+                    <select name="eye" id="eye" required value={eye} onChange={(e)=>setEye(e.target.value)}>
+                        <option value="0">EyeClosed</option>
+                        <option value="1">EyeNormal</option>
+                        <option value="2">RedEye</option>
+                    </select>
+
+
+                    <label>Choose a Hair Style</label>
+                    <select name="hair" id="hair" required value={hair} onChange={(e)=>setHair(e.target.value)}>
+                        <option value="0">Normal</option>
+                        <option value="1">Pink</option>
+                    </select>
+
 
                     <label>Choose a Head Accessory</label>
                     <select name="headAccessory" id="headAccessory" required value={accessory} onChange={(e)=>setAccessory(e.target.value)}>
@@ -78,17 +93,13 @@ const MintPage = () => {
                         <option value="2">Moon</option>
                     </select>
 
-                    <label>Choose a Table Chair</label>
-                    <select name="Table_Char" id="Table_Chair"required value={tableChair} onChange={(e)=>setTableChair(e.target.value)}>
-                        <option value="0">Table_Chair</option>
-                    </select>
-
                     <label>Choose a Torso Dress</label>
                     <select name="TorsoDress" id="TorsoDress"required value={torsoDress} onChange={(e)=>setTorsoDress(e.target.value)}>
                         <option value="0">Torso1</option>
                         <option value="1">Torso2</option>
                         <option value="2">Torso3</option>
                     </select>
+
 
                     <p>The unique DNA of the NFT is: {dnaGenerator()}</p>
                     <br />
@@ -98,7 +109,7 @@ const MintPage = () => {
             </div>
 
             <div className="mint-preview">
-                <MintPreview  {...{bg, head, hand, accessory, onTable, onWall, tableChair, torsoDress}}/>
+                <MintPreview  {...{bg, hand, eye,hair, moustache, accessory, onTable, onWall, torsoDress}}/>
             </div>
 
         </div>
