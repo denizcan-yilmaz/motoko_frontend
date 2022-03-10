@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './Navbar';
+import Home from './Home';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import ItemSelect from './ItemSelect';
+import All from './home_router/All';
+import Collected from './home_router/Collected';
+import MintPage from './MintPage';
+import {useState} from 'react';
+
 
 function App() {
+  const [wallet, setWallet] = useState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+      </div>
+      <div className="itemSelect">
+        <ItemSelect/>
+      </div>
+      <div className="content">
+        <Switch>
+          <Route exact path = "/">
+            <Home/>
+          </Route>
+          <Route path = "/collected">
+            <Collected wallet = {wallet}></Collected>
+          </Route>
+          <Route path = "/all">
+            <All/>
+          </Route>
+          <Route path = "/mint">
+            <MintPage/>
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
